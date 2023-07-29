@@ -2,6 +2,7 @@
   "name": "team-16-front-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Iryna-Gry.github.io/team-16-front-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
