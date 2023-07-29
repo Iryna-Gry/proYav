@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Neucha&family=Nunito:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -11,20 +17,16 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./src/reset.css" />
+    <link rel="stylesheet" href="./src/header.css" />
     <link rel="stylesheet" href="./src/demo.css" />
-    <title>Demo</title>
+    <title>Спробуй ProYav</title>
 
-    <script defer src="face-api.min.js"></script>
-    <script defer src="script.js"></script>
+    <script defer src="./face-api.min.js"></script>
+    <script defer src="./script.js"></script>
     <style>
       body {
         margin: 0;
         padding: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
 
       canvas {
@@ -33,11 +35,62 @@
     </style>
   </head>
   <body>
-    <div id="emojiContainer" style="
-    font-size: 50px; position: absolute; top: 20px; right: 20px"></div>
-    <video id="video" width="720" height="560" autoplay="" muted=""></video> 
-    
+    <header class="page header">
+      <nav class="page__section" id="header-menu">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__top">
+              <a class="logo" href="/">ProYav</a>
+              <a class="icon" href="./index.html#proyav">ПРО ProYav</a>
+              <a class="icon" href="./index.html#howwork">ЯК ЦЕ ПРАЦЮЄ</a>
+              <a class="icon" href="./index.html#galary">ГАЛЕРЕЯ</a>
+              <a class="icon" href="./index.html#advantages">ПЕРЕВАГИ</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="demo section">
+        <div class="container">
+          <h2 class="demo__title">Спробуй ProYav</h2>
+          <div class="demo-container" id="video-container">
+            <div
+              id="emojiContainer"
+              style="
+                font-size: 50px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+              "
+            ></div>
+            <video
+              id="video"
+              width="720"
+              height="560"
+              autoplay=""
+              muted=""
+            ></video>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <nav class="page__section" id="footer-menu">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__top">
+              <a class="logo" href="/">ProYav</a>
+              <a class="icon" href="./index.html#pruav">ПРО ProYav</a>
+              <a class="icon" href="./index.html#howwork">ЯК ЦЕ ПРАЦЮЄ</a>
+              <a class="icon" href="./index.html#galary">ГАЛЕРЕЯ</a>
+              <a class="icon" href="./index.html#advantages">ПЕРЕВАГИ</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </footer>
     <script defer="" src="face-api.min.js" type="module"></script>
-    <script defer="" src="script.js" type="module"></script>  
+    <script defer="" src="script.js" type="module"></script>
   </body>
 </html>
