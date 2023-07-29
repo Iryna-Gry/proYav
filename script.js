@@ -62,7 +62,15 @@ video.addEventListener("play", () => {
   faceapi.matchDimensions(canvas, displaySize);
   setInterval(async () => {
     let emotion = await getCurrentEmotion(video);
-
+    const detections = await faceapi
+      .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
+      .withFaceLandmarks()
+      .withFaceExpressions();
+    const resizedDetections = faceapi.resizeResults(detections, displaySize);
+    canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+    faceapi.draw.drawDetections(canvas, resizedDetections);
+    faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
+    faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
     // Выводим эмодзи, если обнаружено не нейтральное выражение
     if (emotion !== "neutral") {
       emojiContainer.innerHTML = emojiMap[emotion];
