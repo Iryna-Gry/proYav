@@ -55,7 +55,22 @@
         <div class="container">
           <h2 class="demo__title">Спробуй ProYav</h2>
           <div class="demo-container" id="video-container">
-            <video id="video" width="720" height="560" autoplay muted></video>
+            <div
+              id="emojiContainer"
+              style="
+                font-size: 50px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+              "
+            ></div>
+            <video
+              id="video"
+              width="720"
+              height="560"
+              autoplay=""
+              muted=""
+            ></video>
           </div>
         </div>
       </section>
@@ -75,5 +90,7 @@
         </div>
       </nav>
     </footer>
+    <script defer="" src="face-api.min.js" type="module"></script>
+    <script defer="" src="script.js" type="module"></script>
   </body>
 </html>
