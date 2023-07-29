@@ -60,7 +60,7 @@ class CookieHistory extends AbstractHistory {
   addItem(emotion, date=null) {
 
     if (date === null){
-      date = Date.now()
+      date = Date.now();
     }
 
     document.cookie = `history:${date}=${emotion}`;
@@ -87,7 +87,7 @@ class CookieHistory extends AbstractHistory {
   loadCookies(cookiesString) {
     let prepared = this.prepareCookies(cookiesString);
     for (let cookie of prepared) {
-      this.addItem(cookie.split('=')[1], Number(cookie.split('=')[0]))
+      this.addItem(cookie.split('=')[1], Number(cookie.split('=')[0]));
     }
   }
 }
