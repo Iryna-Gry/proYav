@@ -10,31 +10,66 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Neucha&family=Nunito:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/reset.css" />
     <link rel="stylesheet" href="./src/home.css" />
+    <link rel="stylesheet" href="./src/header.css" />
     <title>Home</title>
   </head>
   <body>
-    <header>
-      <nav class="page__menu menu">
+    <header class="page">
+      <nav class="page__section" id="menu">
         <div class="container">
-          <div class="menu__content">
-            <div class="menu__top">
-              <a class="logo" href="/">
-                <img src="xvvv" alt="ssss">
-              </a>
+          <div class="header__content">
+            <div class="header__top">
+              <a class="logo" href="/">ProYav</a>
+              <button class="icon" href="#proyav"> ПРО ProYav </button>
+              <button class="icon" href="#howwork"> ЯК ЦЕ ПРАЦЮЄ </button>
+              <button class="icon" href="#galary"> ГАЛЕРЕЯ </button>
+              <button class="icon" href="#advantages"> ПЕРЕВАГИ </button>
             </div>
-          </div>
-
+           </div>
         </div>
-
       </nav>
+      <section>
+      <div class="container">
+        <div class="headline">
+          <h1 class="headline__content">ProYav</h1>
+          <h1 class="headline__content --two">прояви емоцію</h1>
+        </div>
+        <p class="content">Платформа для розпізнавання <br> емоцій під час онлайн-співбесіди</p>
+        <div class="go">
+          <a href="#go">
+                        <img src="./piсture/Frame 7.png" alt="go">
+          </a>
+          <div class="img__boybox">
+            <img class="img__boy" src="./piсture/Rectangle 311 (1).png" alt="happy boy">
+          </div>
+        </div>
+       </div>
+      </section>
     </header>
     <main>
-      <section>
-
-      </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <nav class="page__section" id="menu">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__top">
+              <a class="logo" href="/">ProYav</a>
+              <button class="icon" href="#proyav"> ПРО ProYav </button>
+              <button class="icon" href="#howwork"> ЯК ЦЕ ПРАЦЮЄ </button>
+              <button class="icon" href="#galary"> ГАЛЕРЕЯ </button>
+              <button class="icon" href="#advantages"> ПЕРЕВАГИ </button>
+            </div>
+           </div>
+        </div>
+      </nav>
+    </footer>
   </body>
 </html>
