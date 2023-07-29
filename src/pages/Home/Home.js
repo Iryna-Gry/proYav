@@ -25,7 +25,6 @@ const Home = () => {
       {isLoading && <Loader></Loader>}
       {movies.length > 0 && <MovieGallery data={movies}></MovieGallery>}
       {error && <p>Something went wrong. Please, refresh the page</p>}
-      <div></div>
     </div>
   );
 };
