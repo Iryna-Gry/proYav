@@ -2,14 +2,17 @@
   background-color: rgba(142, 202, 230, 1);
   padding-left: 40px;
   padding-right: 40px;
-  z-index: 0;
+}
+.header {
+  position: fixed;
+  padding-top: 35px;
+  padding-bottom: 20px;
+  z-index: 10;
 }
 
 .page__section {
   font-family: Neucha;
   box-sizing: border-box;
-  padding-top: 35px;
-  margin-bottom: 80px;
   position: relative;
 }
 
@@ -19,33 +22,26 @@
   padding: 0 20px;
 }
 
-.menu {
-
-}
-
 .header__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .header__top {
-  --iconwidth: 150px;
-  display: grid;
-  grid-template-columns: 1fr var(--iconwidth)
-    var(--iconwidth) var(--iconwidth) var(--iconwidth);
+  display: flex;
+  gap: 52px;
   justify-items: center;
 }
 
 .logo {
-margin-right: 300px;
-text-decoration: none;
-font-size: 50px;
-height: 42px;
-font-weight: 700;
-line-height: 27px;
-color: rgba(252, 252, 252, 1) ;
+  margin-right: auto;
+  text-decoration: none;
+  font-size: 50px;
+  height: 42px;
+  font-weight: 700;
+  line-height: 27px;
+  color: rgba(252, 252, 252, 1);
 }
 
 .icon {
@@ -53,17 +49,30 @@ color: rgba(252, 252, 252, 1) ;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  border-radius: 40px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  padding: 13px;
   background-color: rgba(142, 202, 230, 1);
-   /* width: 100%; */
-  height: 42px;
-  font-weight: 700;
-  line-height: 27px;
-  color: rgba(26, 27, 75, 1);
+  color: #1a1b4b;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1; /* 16px */
+  text-transform: uppercase;
+  border: 1px solid #1a1b4b;
+  cursor: pointer;
+}
+.icon:hover,
+.icon:focus {
+  border: 1px solid #fb8500;
 }
 .headline {
   margin-bottom: 10px;
   font-family: Neucha;
+}
+.headline-section {
+  padding-top: 150px;
+  background-color: rgba(142, 202, 230, 1);
 }
 .headline__content {
   font-family: Neucha;
@@ -95,6 +104,7 @@ color: rgba(252, 252, 252, 1) ;
 }
 
 .footer {
-  height: 100px;
+  padding-top: 35px;
+  padding-bottom: 35px;
   background-color: rgba(142, 202, 230, 1);
 }

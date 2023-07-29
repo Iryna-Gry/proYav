@@ -25,55 +25,304 @@
     <link rel="stylesheet" href="./src/reset.css" />
     <link rel="stylesheet" href="./src/home.css" />
     <link rel="stylesheet" href="./src/header.css" />
-    <title>Home</title>
+    <title>ProYav - прояви емоцію</title>
   </head>
   <body>
-    <header class="page">
-      <nav class="page__section" id="menu">
+    <header class="page header">
+      <nav class="page__section" id="header-menu">
         <div class="container">
           <div class="header__content">
             <div class="header__top">
               <a class="logo" href="/">ProYav</a>
-              <button class="icon" href="#proyav"> ПРО ProYav </button>
-              <button class="icon" href="#howwork"> ЯК ЦЕ ПРАЦЮЄ </button>
-              <button class="icon" href="#galary"> ГАЛЕРЕЯ </button>
-              <button class="icon" href="#advantages"> ПЕРЕВАГИ </button>
+              <a class="icon" href="#proyav">ПРО ProYav</a>
+              <a class="icon" href="#howwork">ЯК ЦЕ ПРАЦЮЄ</a>
+              <a class="icon" href="#galary">ГАЛЕРЕЯ</a>
+              <a class="icon" href="#advantages">ПЕРЕВАГИ</a>
             </div>
-           </div>
-        </div>
-      </nav>
-      <section>
-      <div class="container">
-        <div class="headline">
-          <h1 class="headline__content">ProYav</h1>
-          <h1 class="headline__content --two">прояви емоцію</h1>
-        </div>
-        <p class="content">Платформа для розпізнавання <br> емоцій під час онлайн-співбесіди</p>
-        <div class="go">
-          <a href="#go">
-                        <img src="./piсture/Frame 7.png" alt="go">
-          </a>
-          <div class="img__boybox">
-            <img class="img__boy" src="./piсture/Rectangle 311 (1).png" alt="happy boy">
           </div>
         </div>
-       </div>
-      </section>
+      </nav>
     </header>
     <main>
+      <section class="headline-section section">
+        <div class="container">
+          <div class="headline">
+            <h1 class="headline__content">ProYav</h1>
+            <h1 class="headline__content --two">прояви емоцію</h1>
+          </div>
+          <p class="content">
+            Платформа для розпізнавання <br />
+            емоцій під час онлайн-співбесіди
+          </p>
+          <div class="go">
+            <a href="./demo.html" class="howto__button btn">Спробувати</a>
+            <div class="img__boybox">
+              <img
+                class="img__boy"
+                src="./src/images/happy-guy.png"
+                alt="happy boy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about section" id="proyav">
+        <div class="container">
+          <h2 class="about__title">Про ProYav</h2>
+          <div class="about__wrapper">
+            <div class="about-descr__col">
+              <p class="about-descr__text">
+                <span>ProYav</span> – реально крута платформа, щоб уникнути
+                незручних ситуацій під час онлайн-співбесід, пов’язаних з
+                емоціями.
+              </p>
+              <img
+                src="./src/images/descr_img.png"
+                alt="Job interview photo"
+                class="about-descr__img"
+              />
+            </div>
+            <div class="about-detail__col">
+              <p class="about-detail__text">
+                Чи реально джуну пройти співбесіду з першого разу та отримати
+                офер? Складно, чи не так?
+              </p>
+              <p class="about-detail__text">
+                Але ж як старанна підготовка, повторення технічних термінів,
+                ресьорч сайту та цінностей компанії?
+              </p>
+              <p class="about-detail__text">
+                Емоції. Страх, невпевненість, відчай…
+              </p>
+              <img
+                src="./src/images/detail_img.png"
+                alt="Schedule job interview"
+                class="about-detail__img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantage section">
+        <div class="container">
+          <h2 class="advantage__title">Для кого ProYav</h2>
+          <div class="advantage__wrapper">
+            <div class="advantage-list__wrapper">
+              <ul class="advantage__list">
+                <li class="advantage-list__item">
+                  <h3 class="advantage-item__title">Для джуна</h3>
+                  <p class="advantage-item__text">
+                    Потренуватися, підготуватися та спробувати свої сили.
+                  </p>
+                </li>
+                <li class="advantage-list__item">
+                  <h3 class="advantage-item__title">Результат</h3>
+                  <p class="advantage-item__text">
+                    Впевненість у собі та прокачаний скіл з керування власними
+                    емоціями під час співбесіди.
+                  </p>
+                </li>
+              </ul>
+              <div class="advantage-list__img">
+                <img src="./src/images/chicken.png" alt="chicken" width="184" />
+              </div>
+            </div>
+            <div class="advantage-list__wrapper">
+              <ul class="advantage__list">
+                <li class="advantage-list__item">
+                  <h3 class="advantage-item__title">Для компанії</h3>
+                  <p class="advantage-item__text">
+                    Побачити, що саме відчуває джун на співбесіді, і, якщо
+                    варто, дати другий шанс.
+                  </p>
+                </li>
+                <li class="advantage-list__item">
+                  <h3 class="advantage-item__title">Результат</h3>
+                  <p class="advantage-item__text">
+                    Можливість не втратити крутого молодого спеціальста після
+                    першої співбесіди.
+                  </p>
+                </li>
+              </ul>
+              <div class="advantage-list__img">
+                <img src="./src/images/owl.png" alt="owl" width="222" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="plus section" id="advantages">
+        <div class="container">
+          <h2 class="plus__title">Переваги</h2>
+          <div class="plus__wrapper">
+            <ul class="plus__list">
+              <li class="plus-list__item">
+                <span class="plus--line"></span>
+                <p class="plus-list__text">
+                  Розширення «ProYav», яке можна синхронізувати з
+                  відеоконференцією
+                </p>
+              </li>
+              <li class="plus-list__item">
+                <span class="plus--line"></span>
+                <p class="plus-list__text">
+                  Можливість для джуна потренуватися перед реальною співбесідою
+                </p>
+              </li>
+              <li class="plus-list__item">
+                <span class="plus--line"></span>
+                <p class="plus-list__text">
+                  Крутий молодий співробітник для компанії
+                </p>
+              </li>
+            </ul>
+            <a
+              href="https://github.com/Arag0rn/FaseEmotion"
+              target="_blank"
+              class="plus__button btn"
+              >Завантажити розширення</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="how-to section" id="howwork">
+        <div class="container">
+          <h2 class="how-to__title">Як це працює?</h2>
+          <div class="how-to__wrapper">
+            <div class="how-to__list-col">
+              <ul class="how-to__list">
+                <li class="howto-list__item">
+                  <div class="howto-item__number">1</div>
+                  <p class="howto-item__text">Перейди на платформу ProYav</p>
+                </li>
+                <li class="howto-list__item">
+                  <div class="howto-item__number">2</div>
+                  <p class="howto-item__text">
+                    Надай дозвіл на доступ до твоєї камери
+                  </p>
+                </li>
+                <li class="howto-list__item">
+                  <div class="howto-item__number">3</div>
+                  <p class="howto-item__text">
+                    Випробуй можливості ProYav та переконайся, що вона реально
+                    крута
+                  </p>
+                </li>
+                <li class="howto-list__item">
+                  <div class="howto-item__number">4</div>
+                  <p class="howto-item__text">
+                    Завантаж та встанови розширення для свого браузера
+                  </p>
+                </li>
+                <li class="howto-list__item">
+                  <div class="howto-item__number">5</div>
+                  <p class="howto-item__text">
+                    Запусти розширення ProYav з відеоконференцією та протестуй
+                    свої емоції
+                  </p>
+                </li>
+                <li class="howto-list__button">
+                  <a href="#" class="howto__button btn"
+                    >Завантажити розширення</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="how-to__img-col">
+              <img
+                src="./src/images/lovely-face.png"
+                alt="lovely-face"
+                class="howto__lovely--img"
+              />
+              <img
+                src="./src/images/neutral-face.png"
+                alt="neutral-face"
+                class="howto__neutral--img"
+              />
+              <img
+                src="./src/images/surprised-face.png"
+                alt="surprised-face"
+                class="howto__surprised--img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="galery section" id="galary">
+        <div class="container">
+          <h2 class="galery__title">Галерея</h2>
+          <ul class="galery__list">
+            <li class="galery-list__item">
+              <img
+                src="./src/images/galery-item-1.jpg"
+                alt="gallery image"
+                class="galery-item__img"
+              />
+            </li>
+            <li class="galery-list__item">
+              <img
+                src="./src/images/galery-item-2.jpg"
+                alt="gallery image"
+                class="galery-item__img"
+              />
+            </li>
+            <li class="galery-list__item">
+              <img
+                src="./src/images/galery-item-3.jpg"
+                alt="gallery image"
+                class="galery-item__img"
+              />
+            </li>
+            <li class="galery-list__item">
+              <img
+                src="./src/images/galery-item-4.jpg"
+                alt="gallery image"
+                class="galery-item__img"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="try section">
+        <div class="container">
+          <h2 class="try__title">Прояви емоції</h2>
+          <div class="try__wrapper">
+            <div class="try-list__wrapper">
+              <h3 class="try-item__title">Cпробуй демо-версію ProYav</h3>
+              <a
+                href="./demo.html"
+                target="_blank"
+                class="try__button try__button--transparent btn"
+                >Спробувати</a
+              >
+            </div>
+            <div class="try-list__wrapper">
+              <h3 class="try-item__title">
+                Завантажуй розширення «ProYav» на свій браузер
+              </h3>
+              <a
+                href="https://github.com/Arag0rn/FaseEmotion"
+                target="_blank"
+                class="try__button btn"
+                >Завантажити розширення</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-      <nav class="page__section" id="menu">
+      <nav class="page__section" id="footer-menu">
         <div class="container">
           <div class="header__content">
             <div class="header__top">
               <a class="logo" href="/">ProYav</a>
-              <button class="icon" href="#proyav"> ПРО ProYav </button>
-              <button class="icon" href="#howwork"> ЯК ЦЕ ПРАЦЮЄ </button>
-              <button class="icon" href="#galary"> ГАЛЕРЕЯ </button>
-              <button class="icon" href="#advantages"> ПЕРЕВАГИ </button>
+              <a class="icon" href="#proyav">ПРО ProYav</a>
+              <a class="icon" href="#howwork">ЯК ЦЕ ПРАЦЮЄ</a>
+              <a class="icon" href="#galary">ГАЛЕРЕЯ</a>
+              <a class="icon" href="#advantages">ПЕРЕВАГИ</a>
             </div>
-           </div>
+          </div>
         </div>
       </nav>
     </footer>

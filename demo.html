@@ -17,20 +17,16 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./src/reset.css" />
+    <link rel="stylesheet" href="./src/header.css" />
     <link rel="stylesheet" href="./src/demo.css" />
-    <title>Demo</title>
+    <title>Спробуй ProYav</title>
 
-    <script defer src="face-api.min.js"></script>
-    <script defer src="script.js"></script>
+    <script defer src="./face-api.min.js"></script>
+    <script defer src="./script.js"></script>
     <style>
       body {
         margin: 0;
         padding: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
 
       canvas {
@@ -39,6 +35,45 @@
     </style>
   </head>
   <body>
-    <video id="video" width="720" height="560" autoplay muted></video>
+    <header class="page header">
+      <nav class="page__section" id="header-menu">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__top">
+              <a class="logo" href="/">ProYav</a>
+              <a class="icon" href="./index.html#proyav">ПРО ProYav</a>
+              <a class="icon" href="./index.html#howwork">ЯК ЦЕ ПРАЦЮЄ</a>
+              <a class="icon" href="./index.html#galary">ГАЛЕРЕЯ</a>
+              <a class="icon" href="./index.html#advantages">ПЕРЕВАГИ</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="demo section">
+        <div class="container">
+          <h2 class="demo__title">Спробуй ProYav</h2>
+          <div class="demo-container" id="video-container">
+            <video id="video" width="720" height="560" autoplay muted></video>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <nav class="page__section" id="footer-menu">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__top">
+              <a class="logo" href="/">ProYav</a>
+              <a class="icon" href="./index.html#pruav">ПРО ProYav</a>
+              <a class="icon" href="./index.html#howwork">ЯК ЦЕ ПРАЦЮЄ</a>
+              <a class="icon" href="./index.html#galary">ГАЛЕРЕЯ</a>
+              <a class="icon" href="./index.html#advantages">ПЕРЕВАГИ</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </footer>
   </body>
 </html>
