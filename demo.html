@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./src/demo.css" />
     <title>Demo</title>
 
+    <script defer src="history.js"></script>
     <script defer src="face-api.min.js"></script>
     <script defer src="script.js"></script>
     <style>
@@ -35,6 +36,35 @@
   <body>
     <div id="emojiContainer" style="
     font-size: 50px; position: absolute; top: 20px; right: 20px"></div>
+    <div id="historyContainer" style="
+    position: absolute; top: 20px; left: 20px">
+    </div>
+    <style>
+      #historyContainer {
+        width: 200px;
+        height: 600px;
+        overflow-y: hidden;
+
+        background-color: lightgray;
+      }
+
+      .historyItem {
+        height: 30px;
+        line-height: 30px;
+
+        text-align: center;
+
+        margin: 5px;
+        color: white;
+        background-color: gray;
+      }
+      
+      .historySpan {
+        margin: 4px;
+        font-size: 12px;
+        color: wheat;
+      }
+    </style>
     <video id="video" width="720" height="560" autoplay="" muted=""></video> 
     
     <script defer="" src="face-api.min.js" type="module"></script>

@@ -1,5 +1,7 @@
 const video = document.getElementById('video');
-const emojiContainer = document.getElementById('emojiContainer'); // Emoji container 
+const emojiContainer = document.getElementById('emojiContainer'); // Emoji container
+const historyContainer = document.getElementById('historyContainer'); // History container
+const history = new CookieHistory()
 
 const emojiMap = {
   neutral: '😐',
@@ -33,14 +35,14 @@ function startVideo() {
 
 async function getCurrentEmotion(video) {
   let expressions = (await faceapi.detectSingleFace(video).withFaceExpressions()).expressions;
-  let resultExpression = 'neutral'
+  let resultExpression = 'neutral';
 
   // Get the most possible emotion
   for (let key in expressions) {
-    let value = expressions[key]
+    let value = expressions[key];
 
     if (value > expressions[resultExpression]) {
-      resultExpression = key
+      resultExpression = key;
     }
   }
   return resultExpression;
@@ -52,14 +54,27 @@ video.addEventListener('play', () => {
   const displaySize = { width: video.width, height: video.height };
   faceapi.matchDimensions(canvas, displaySize);
 
+  for (emotion of history.getItemList()) { // emotion = {name: 'sad', date: 1690661025999} 
+    historyContainer.insertAdjacentHTML('afterbegin', `<p class='historyItem'>${emotion.emotion}<span class='historySpan'>${emotion.date}</span></p>`);
+  }
+
   setInterval(async () => {
-    let emotion = await getCurrentEmotion(video)
-    
-    // Выводим эмодзи, если обнаружено не нейтральное выражение
-    if (emotion !== 'neutral') {
-      emojiContainer.innerHTML = emojiMap[emotion];
-    } else {
+    let emotion = await getCurrentEmotion(video);
+    let lastEmotion = historyContainer.querySelector('p:first-of-type')?.textContent ?? 'neutral';
+
+    // Neutral emotion check
+    if (emotion === 'neutral') {
       emojiContainer.innerHTML = '';
+      return;
     }
+ 
+    if (lastEmotion === emotion) {
+      emojiContainer.innerHTML = emojiMap[emotion];
+      return;
+    }
+
+    historyList = history.addItem(emotion)
+    emojiContainer.innerHTML = emojiMap[emotion];
+    historyContainer.insertAdjacentHTML('afterbegin', `<p class='historyItem'>${emotion}</p>`);
   }, 100);
 });
