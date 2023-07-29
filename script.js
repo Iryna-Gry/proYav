@@ -1,7 +1,7 @@
 const video = document.getElementById('video');
 const emojiContainer = document.getElementById('emojiContainer'); // Emoji container
 const historyContainer = document.getElementById('historyContainer'); // History container
-const history = new CookieHistory()
+const history = new CookieHistory();
 
 const emojiMap = {
   neutral: '😐',
@@ -73,7 +73,7 @@ video.addEventListener('play', () => {
       return;
     }
 
-    historyList = history.addItem(emotion)
+    historyList = history.addItem(emotion);
     emojiContainer.innerHTML = emojiMap[emotion];
     historyContainer.insertAdjacentHTML('afterbegin', `<p class='historyItem'>${emotion}</p>`);
   }, 100);
