@@ -1,0 +1,26 @@
+.Nothing_Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.NothingSVG {
+  width: 300px;
+  height: 250px;
+  box-sizing: border-box;
+  color: black;
+  fill: currentColor;
+}
+@media (min-width: 768px) {
+  .NothingSVG {
+    width: 500px;
+    height: 300px;
+  }
+}
+.Nothing_Text {
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  color: crimson;
+}
