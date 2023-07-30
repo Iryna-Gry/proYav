@@ -3,14 +3,15 @@ const emojiContainer = document.getElementById('emojiContainer'); // Emoji conta
 const historyContainer = document.getElementById('historyContainer'); // History container
 const history = new CookieHistory();
 
+
 const emojiMap = {
-  neutral: '😐',
-  happy: '😄',
-  sad: '😢',
-  angry: '😠',
-  surprised: '😲',
-  disgusted: '🤢',
-  fearful: '😨'
+  neutral: "😐",
+  happy: "😄",
+  sad: "😢",
+  angry: "😠",
+  surprised: "😲",
+  disgusted: "🤢",
+  fearful: "😨",
 };
 
 Promise.all([
@@ -22,20 +23,28 @@ Promise.all([
 ]).then(startVideo);
 
 function startVideo() {
+  navigator.getUserMedia(
+    { video: {} },
+    (stream) => (video.srcObject = stream),
+    (err) => console.error(err)
+  );
   try {
-    navigator.mediaDevices.getUserMedia({ video: {} })
-      .then(stream => {
+    navigator.mediaDevices
+      .getUserMedia({ video: {} })
+      .then((stream) => {
         video.srcObject = stream;
       })
-      .catch(err => console.error("Error accessing the camera: ", err));
+      .catch((err) => console.error("Error accessing the camera: ", err));
   } catch {
     console.error("getUserMedia is not available");
   }
 }
 
 async function getCurrentEmotion(video) {
-  let expressions = (await faceapi.detectSingleFace(video).withFaceExpressions()).expressions;
-  let resultExpression = 'neutral';
+  let expressions = (
+    await faceapi.detectSingleFace(video).withFaceExpressions()
+  ).expressions;
+  let resultExpression = "neutral";
 
   // Get the most possible emotion
   for (let key in expressions) {
@@ -48,9 +57,10 @@ async function getCurrentEmotion(video) {
   return resultExpression;
 }
 
-video.addEventListener('play', () => {
+video.addEventListener("play", () => {
   const canvas = faceapi.createCanvasFromMedia(video);
-  document.body.append(canvas);
+  const videoContainer = document.getElementById("video-container");
+  videoContainer.append(canvas);
   const displaySize = { width: video.width, height: video.height };
   faceapi.matchDimensions(canvas, displaySize);
 
@@ -66,6 +76,7 @@ video.addEventListener('play', () => {
     if (emotion === 'neutral') {
       emojiContainer.innerHTML = '';
       return;
+
     }
  
     if (lastEmotion === emotion) {
