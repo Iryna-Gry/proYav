@@ -15,11 +15,11 @@ const emojiMap = {
 };
 
 Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-  faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-  faceapi.nets.faceExpressionNet.loadFromUri('/models'),
-  faceapi.nets.ssdMobilenetv1.loadFromUri('/models')
+  faceapi.nets.tinyFaceDetector.loadFromUri('/team-16-front-react/models'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('/team-16-front-react/models'),
+  faceapi.nets.faceRecognitionNet.loadFromUri('/team-16-front-react/models'),
+  faceapi.nets.faceExpressionNet.loadFromUri('/team-16-front-react/models'),
+  faceapi.nets.ssdMobilenetv1.loadFromUri('/team-16-front-react/models')
 ]).then(startVideo);
 
 function startVideo() {
