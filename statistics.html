@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="./src/header.css" />
     <link rel="stylesheet" href="./src/statistics.css" />
     <title>Statistics</title>
+    <script defer src="history.js"></script>
+    <script defer src="stats.js"></script>
   </head>
   <body>
     <header class="page header">
@@ -49,7 +51,7 @@
                 <img src="./src/images/happy.png" width="150" />
               </div>
               <div>
-                <p class="stats-item__text">Сьогодні ти посміхався 65 разів.</p>
+                <p class="stats-item__text">Сьогодні ти посміхався <span id="happy"></span> рази.</p>
                 <p class="stats-item__text">Треба повторити!</p>
               </div>
             </li>
@@ -59,7 +61,7 @@
                 <img src="./src/images/surprised.png" width="150" />
               </div>
               <div>
-                <p class="stats-item__text">Сьогодні ти дивувався 10 разів.</p>
+                <p class="stats-item__text">Сьогодні ти дивувався <span id="surprised"></span> рази.</p>
                 <p class="stats-item__text">Життя має багато сюрпризів!</p>
               </div>
             </li>
@@ -69,7 +71,7 @@
                 <img src="./src/images/sad.png" width="150" />
               </div>
               <div>
-                <p class="stats-item__text">Сьогодні ти сумував 3 рази.</p>
+                <p class="stats-item__text">Сьогодні ти сумував <span id="sad"></span> рази.</p>
                 <p class="stats-item__text">Тримай хвоста пістолетом!</p>
               </div>
             </li>
@@ -80,7 +82,7 @@
               </div>
               <div>
                 <p class="stats-item__text">
-                  Сьогодні ти відчував роздратованість 5 разів.
+                  Сьогодні ти відчував роздратованість <span id="angry"></span> рази.
                 </p>
                 <p class="stats-item__text">Візьми хвилинку, побалуй себе!</p>
               </div>
@@ -92,7 +94,7 @@
               </div>
               <div>
                 <p class="stats-item__text">
-                  Сьогодні ти відчував відразу 2 рази.
+                  Сьогодні ти відчував відразу <span id="disgusted"></span> рази.
                 </p>
                 <p class="stats-item__text">Знайти та знешкодити!</p>
               </div>
@@ -104,7 +106,7 @@
               </div>
               <div>
                 <p class="stats-item__text">
-                  Сьогодні ти відчував страх 3 рази.
+                  Сьогодні ти відчував страх <span id="fearful"></span> рази.
                 </p>
                 <p class="stats-item__text">Чи дійсно той чорт страшний?</p>
               </div>
@@ -127,6 +129,6 @@
           </div>
         </div>
       </nav>
-    </footer>
+    </footer>>
   </body>
 </html>
