@@ -28,7 +28,8 @@
         height: 600px;
         overflow-y: hidden;
 
-        background-color: lightgray;
+        background-color: rgba(142, 202, 230, 1);
+        border-radius: 10px;
       }
 
       .historyItem {
@@ -38,14 +39,24 @@
         text-align: center;
 
         margin: 5px;
-        color: white;
-        background-color: gray;
+        color: rgb(22, 78, 104);
+        background-color: #fff1bf;
+      }
+
+      .historyItem:first-of-type {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .historyItem:nth-child(17) {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
       }
       
       .historySpan {
         margin: 4px;
         font-size: 12px;
-        color: wheat;
+        color: rgb(22, 78, 104);
       }
     </style>
     <script defer src="history.js"></script>
