@@ -64,7 +64,7 @@ video.addEventListener("play", () => {
   const displaySize = { width: video.width, height: video.height };
   faceapi.matchDimensions(canvas, displaySize);
 
-  for (emotion of history.getItemList()) { // emotion = {name: 'sad', date: 1690661025999} 
+  for (emotion of history.getHistoryList()) { // emotion = {name: 'sad', date: 1690661025999} 
     historyContainer.insertAdjacentHTML('afterbegin', `<p class='historyItem'>${emotion.emotion}<span class='historySpan'>${emotion.date}</span></p>`);
   }
 
