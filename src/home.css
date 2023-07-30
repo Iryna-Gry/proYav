@@ -1,4 +1,3 @@
-
 .about,
 .advantage {
   background-color: #fff1bf;
@@ -287,6 +286,10 @@
   font-weight: 700;
   line-height: 1.2; /* 26.4px */
 }
+.plus__button {
+  margin-left: auto;
+  margin-right: auto;
+}
 .howto__button:hover,
 .howto__button:focus,
 .plus__button:hover,
@@ -376,14 +379,10 @@
 .plus {
   background-color: #8ecae6;
 }
-.plus__wrapper {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-}
+
 .plus__list {
-  width: 75%;
-  display: flex;
+  width: 100%;
+  display: block;
 }
 
 .plus-list__item {
@@ -423,7 +422,17 @@
   left: calc(50% - 18px);
   transform: rotate(-90deg) translate(-50%, -50%);
 }
-
+@media screen and (min-width: 768px) {
+  .plus__wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .plus__list {
+    width: 75%;
+    display: flex;
+  }
+}
 .try {
   background-color: #fff1bf;
 }
@@ -459,8 +468,10 @@
   flex-direction: column;
   align-items: center;
 }
-.try-list__wrapper:not(:last-child) {
-  margin-bottom: 0;
+@media screen and (min-width: 768px) {
+  .try-list__wrapper:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .galery,
