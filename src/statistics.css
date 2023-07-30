@@ -1,0 +1,136 @@
+.stats {
+  background-color: #fff1bf;
+  padding-top: 130px;
+}
+.stats__title {
+  color: #1a1b4b;
+  font-family: Neucha, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .stats__title {
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .stats__title {
+    font-size: 80px;
+    margin-bottom: 40px;
+  }
+}
+.stats-item__title {
+  color: #1a1b4b;
+  text-align: center;
+  font-family: Nunito;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.35; /* 29.7px */
+  max-width: 374px;
+}
+
+.stats-list__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stats-list__wrapper:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.stats__wrapper {
+  display: block;
+}
+
+.stats-list__wrapper {
+  width: 100%;
+  border-radius: 35px;
+  border: 1px solid #6a6a6a;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.stats-list__wrapper:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.stats__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  max-width: 155px;
+}
+.stats-item__title {
+  color: #fb8500;
+  font-family: Nunito, sans-serif;
+  font-size: 18px;
+
+  font-weight: 700;
+  line-height: 1; /* 22px */
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.stats-item__text {
+  color: #1a1b4b;
+  font-family: Nunito, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35; /* 29.7px */
+  text-align: center;
+}
+.stats-list__img {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .stats__wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .stats-list__wrapper {
+    width: calc((100% - 20px) / 2);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .stats-list__wrapper:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .stats-list__wrapper {
+    width: calc((100% - 40px) / 3);
+    padding: 25px;
+    padding-bottom: 31px;
+    height: auto;
+  }
+
+  .stats__list {
+    gap: 35px;
+    max-width: 353px;
+  }
+  .stats-item__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .stats-item__text {
+    font-size: 22px;
+  }
+}
