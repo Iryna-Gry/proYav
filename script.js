@@ -1,5 +1,8 @@
-const video = document.getElementById("video");
-const emojiContainer = document.getElementById("emojiContainer"); // Emoji container
+const video = document.getElementById('video');
+const emojiContainer = document.getElementById('emojiContainer'); // Emoji container
+const historyContainer = document.getElementById('historyContainer'); // History container
+const history = new CookieHistory();
+
 
 const emojiMap = {
   neutral: "😐",
@@ -12,11 +15,11 @@ const emojiMap = {
 };
 
 Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri("/team-16-front-react/models"),
-  faceapi.nets.faceLandmark68Net.loadFromUri("/team-16-front-react/models"),
-  faceapi.nets.faceRecognitionNet.loadFromUri("/team-16-front-react/models"),
-  faceapi.nets.faceExpressionNet.loadFromUri("/team-16-front-react/models"),
-  faceapi.nets.ssdMobilenetv1.loadFromUri("/team-16-front-react/models"),
+  faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
+  faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
+  faceapi.nets.faceExpressionNet.loadFromUri('/models'),
+  faceapi.nets.ssdMobilenetv1.loadFromUri('/models')
 ]).then(startVideo);
 
 function startVideo() {
@@ -60,22 +63,29 @@ video.addEventListener("play", () => {
   videoContainer.append(canvas);
   const displaySize = { width: video.width, height: video.height };
   faceapi.matchDimensions(canvas, displaySize);
+
+  for (emotion of history.getItemList()) { // emotion = {name: 'sad', date: 1690661025999} 
+    historyContainer.insertAdjacentHTML('afterbegin', `<p class='historyItem'>${emotion.emotion}<span class='historySpan'>${emotion.date}</span></p>`);
+  }
+
   setInterval(async () => {
     let emotion = await getCurrentEmotion(video);
-    const detections = await faceapi
-      .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
-      .withFaceLandmarks()
-      .withFaceExpressions();
-    const resizedDetections = faceapi.resizeResults(detections, displaySize);
-    canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
-    faceapi.draw.drawDetections(canvas, resizedDetections);
-    faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
-    faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
-    // Выводим эмодзи, если обнаружено не нейтральное выражение
-    if (emotion !== "neutral") {
-      emojiContainer.innerHTML = emojiMap[emotion];
-    } else {
-      emojiContainer.innerHTML = "";
+    let lastEmotion = historyContainer.querySelector('p:first-of-type')?.textContent ?? 'neutral';
+
+    // Neutral emotion check
+    if (emotion === 'neutral') {
+      emojiContainer.innerHTML = '';
+      return;
+
     }
+ 
+    if (lastEmotion === emotion) {
+      emojiContainer.innerHTML = emojiMap[emotion];
+      return;
+    }
+
+    historyList = history.addItem(emotion);
+    emojiContainer.innerHTML = emojiMap[emotion];
+    historyContainer.insertAdjacentHTML('afterbegin', `<p class='historyItem'>${emotion}</p>`);
   }, 100);
 });

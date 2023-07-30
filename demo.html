@@ -22,8 +22,35 @@
     <link rel="stylesheet" href="./src/demo.css" />
     <title>Спробуй ProYav</title>
 
-    <script defer src="./face-api.min.js"></script>
-    <script defer src="./script.js"></script>
+    <style>
+      #historyContainer {
+        width: 200px;
+        height: 600px;
+        overflow-y: hidden;
+
+        background-color: lightgray;
+      }
+
+      .historyItem {
+        height: 30px;
+        line-height: 30px;
+
+        text-align: center;
+
+        margin: 5px;
+        color: white;
+        background-color: gray;
+      }
+      
+      .historySpan {
+        margin: 4px;
+        font-size: 12px;
+        color: wheat;
+      }
+    </style>
+    <script defer src="history.js"></script>
+    <script defer src="face-api.min.js"></script>
+    <script defer src="script.js"></script>
     <style>
       body {
         margin: 0;
@@ -53,6 +80,9 @@
     </header>
     <main>
       <section class="demo section">
+        <div id="historyContainer" style="
+          position: absolute; left: 20px">
+        </div>
         <div class="container">
           <h2 class="demo__title">Спробуй ProYav</h2>
           <div class="demo-container" id="video-container">
