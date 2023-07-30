@@ -12,7 +12,7 @@
 }
 
 .page__section {
-  font-family: Neucha;
+  font-family: Neucha, sans-serif;
   box-sizing: border-box;
   position: relative;
 }
